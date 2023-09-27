@@ -125,3 +125,15 @@
 //   console.log(`Hi ${name}`);
 // }
 
+//Eslint - code analyzer
+//it analyzes your code and offers advice about style, format, 
+//coding practices, possible errors, and other problem
+
+// $ npm install eslint@7.12.1 eslint-cli babel-eslint --save-dev
+// Note that you must install these 3 packages for every project where 
+//you need to use ESLint.
+// $ npx eslint -v 
+//currently recommending version 7.12.1 of ESLint as later versions 
+//are currently causing difficulties.,
+//usage:
+//$ npx eslint test.js
