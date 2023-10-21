@@ -5,7 +5,7 @@ function prompt (msg) {
 }
 
 function invalidNumber (number) {
-  return number.trimStart() === '' || Number.isNaN(number); 
+  return number.trimStart() === '' || Number.isNaN(number);
 }
 prompt('Welcome to calculator');
 
@@ -16,6 +16,8 @@ while (invalidNumber(number1)) {
   prompt('Enter valid first number? ');
   number1 = readline.question();
 }
+
+
 
 prompt('What is the second number');
 let number2 = readline.question();
