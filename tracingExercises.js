@@ -1,6 +1,6 @@
 let num1 = 5;
 function myFunc() {
-    num1 = 10;
+  num1 = 10;
 }
 myFunc();
 console.log(num1);
@@ -8,8 +8,8 @@ console.log(num1);
 
 let num2 = 5;
 function myFunc() {
-    console.log(num2);
-    num2 = 10;
+  console.log(num2);
+  num2 = 10;
 }
 myFunc();
 console.log(num2);
@@ -173,3 +173,76 @@ console.log(myWord);
 //output => 
 //['Hi', 'Goodbye']
 //'Hello'
+
+//Pass by Reference vs Pass by Value Exercises
+
+//1.
+function changeMyWord(word) {
+  console.log(word);
+  word = word.toUpperCase();
+}
+
+let myWord = 'Hello';
+changeMyWord(myWord);
+console.log(myWord);
+//output => 
+//'Hello'
+//'Hello'
+
+//2.
+function changeMyWord(word) {
+  console.log(word);
+  word = word.toUpperCase();
+  return word;
+}
+
+let myWord = 'Hello';
+myWord = changeMyWord(myWord);
+console.log(myWord);
+//output =>
+//'Hello'
+//'HELLO'
+
+
+//3. 
+function changeMyWord(word) {
+  console.log(word);
+  word = word.toUpperCase();
+  return word;
+}
+
+let myWord = 'Hello';
+let myOtherWord = changeMyWord(myWord);
+console.log(myWord);
+console.log(myOtherWord);
+//output =>
+//'Hello'
+//'Hello'
+//'HELLO'
+
+
+//4.
+function changeMyWords(words) {
+  console.log(words);
+  words[0] = 'Hi';
+}
+
+let myWords = ['Hello', 'Goodbye'];
+changeMyWords(myWords);
+console.log(myWords);
+//output =>
+//['Hello', 'Goodbye']
+//['Hi', 'Goodbye']
+
+//5.
+function changeMyWords(words) {
+  console.log(words);
+  words = ['Hi', 'Goodbye'];
+}
+
+let myWords = ['Hello', 'Goodbye'];
+changeMyWords(myWords);
+console.log(myWords);
+//output =>
+//['Hello', 'Goodbye']
+//['Hi', 'Goodbye']
