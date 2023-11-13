@@ -246,3 +246,101 @@ console.log(myWords);
 //output =>
 //['Hello', 'Goodbye']
 //['Hi', 'Goodbye']
+
+
+//Exercises: Variables, Functions and Blocks
+//1.
+let color = "yellow";
+let colors = ["red", "green", "blue"];
+
+function updateColors(colors) {
+  colors.push(color);
+}
+
+updateColors(colors);
+console.log(colors);
+//output => ["red", "green", "blue", "yellow"]
+
+//2.
+let color = "yellow";
+let colors = ["red", "green", "blue"];
+
+function updateColors(colors, color) {
+  colors.push(color);
+}
+
+updateColors(colors);
+console.log(colors);
+//output => ["red", "green", "blue", undefined]
+
+//3.
+let color1 = "purple";
+let color2 = "pink";
+let colors = ["red", "green", "blue"];
+
+function updateColors(colors, color) {
+  colors.push(color);
+}
+
+updateColors(colors, color1);
+updateColors(colors, color2);
+console.log(colors);
+//output => ["red", "green", "blue", "purple", "pink"]
+
+//4.
+let color1 = "purple";
+let color2 = "pink";
+let colors = ["red", "green", "blue"];
+
+function updateColors(colors, color) {
+  colors.push(color);
+  return colors;
+}
+
+let newColors = updateColors(colors, color1);
+updateColors(newColors, color2);
+console.log(colors);
+//output => ["red", "green", "blue","purple","pink"]
+
+
+//5.
+let color = "purple";
+let colors = ["red", "green", "blue"];
+
+function addColor(colors, color) {
+  colors.push(color);
+  return colors;
+}
+
+function removeColor(colors) {
+  color = colors.pop();
+  return colors;
+}
+
+let newColors = removeColor(colors);
+addColor(colors, color);
+console.log(newColors);
+
+//output => ["red", "green", "blue"]
+
+//6.
+function capitalize() {
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+function exclaim() {
+  return (word += "!!!");
+}
+
+let word = "hello";
+let capitalizedWord = capitalize(word);
+let exclaimedWord = exclaim(capitalizedWord);
+
+console.log(word);
+console.log(capitalizedWord);
+console.log(exclaimedWord);
+//output =>
+//hello
+//Hello
+//Hello!!!
+
