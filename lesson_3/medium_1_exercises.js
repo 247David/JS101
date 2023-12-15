@@ -97,9 +97,9 @@
 
 //6. What do you think the following code will output?
 
-let nanArray = [NaN];
+// let nanArray = [NaN];
 
-console.log(nanArray[0] === NaN);
+// console.log(nanArray[0] === NaN);
 
 //output: false. Number.isNaN()- used to compare for NaN else === with NaN
 //always false.
@@ -111,31 +111,31 @@ function messWithIt(someNumber) {
   return (someNumber += 8);
 }
 
-let newAnswer = messWithIt(answer);
+// let newAnswer = messWithIt(answer);
 
-console.log(answer - 8);
+// console.log(answer - 8);
 
 //answer = 34
 
 //8. One day, Spot was playing with the Munster family's home computer,
 //and he wrote a small program to mess with their demographic data:
 
-let munsters = {
-  Herman: { age: 32, gender: "male" },
-  Lily: { age: 30, gender: "female" },
-  Grandpa: { age: 402, gender: "male" },
-  Eddie: { age: 10, gender: "male" },
-  Marilyn: { age: 23, gender: "female" },
-};
+// let munsters = {
+//   Herman: { age: 32, gender: "male" },
+//   Lily: { age: 30, gender: "female" },
+//   Grandpa: { age: 402, gender: "male" },
+//   Eddie: { age: 10, gender: "male" },
+//   Marilyn: { age: 23, gender: "female" },
+// };
 
-function messWithDemographics(demoObject) {
-  Object.values(demoObject).forEach(familyMember => {
-    familyMember["age"] += 42;
-    familyMember["gender"] = "other";
-  });
+// function messWithDemographics(demoObject) {
+//   Object.values(demoObject).forEach(familyMember => {
+//     familyMember["age"] += 42;
+//     familyMember["gender"] = "other";
+//   });
 }
 //will this change the data?
-messWithDemographics(munsters);
+// messWithDemographics(munsters);
 //Yes. age and data values will be changed.
 
 //9 .Function and method calls can take expressions as arguments. Suppose we
@@ -143,29 +143,29 @@ messWithDemographics(munsters);
 //rock-paper-scissors game, but with a slight twist: in the event of a tie, it
 //just returns the choice made by both players.
 
-function rps(fist1, fist2) {
-  if (fist1 === "rock") {
-    return fist2 === "paper" ? "paper" : "rock";
-  } else if (fist1 === "paper") {
-    return fist2 === "scissors" ? "scissors" : "paper";
-  } else {
-    return fist2 === "rock" ? "rock" : "scissors";
-  }
-}
+// function rps(fist1, fist2) {
+//   if (fist1 === "rock") {
+//     return fist2 === "paper" ? "paper" : "rock";
+//   } else if (fist1 === "paper") {
+//     return fist2 === "scissors" ? "scissors" : "paper";
+//   } else {
+//     return fist2 === "rock" ? "rock" : "scissors";
+//   }
+// }
 
 //What does the following code output?
-console.log(rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock"));
+// console.log(rps(rps(rps("rock", "paper"), rps("rock", "scissors")), "rock"));
 //return paper
 
 
 //10. Consider these two simple functions:
-function foo(param = "no") {
-  return "yes";
-}
+// function foo(param = "no") {
+//   return "yes";
+// }
 
-function bar(param = "no") {
-  return param === "no" ? "yes" : "no";
-}
+// function bar(param = "no") {
+//   return param === "no" ? "yes" : "no";
+// }
 // What will the following function invocation return?
 // bar(foo());
 //Ans: 'no'
